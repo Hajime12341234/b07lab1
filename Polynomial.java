@@ -4,11 +4,11 @@ public class Polynomial {
         this.coefficients = new double[]{0};
     }
     
-    public Polynomial(double[] coefficients) {
-        this.coefficients = new double[coefficients.length];
+    public Polynomial(double[] coef_vector) {
+        this.coefficients = new double[coef_vector.length];
         int i; 
-        for (i = 0; i < coefficients.length; i++) {
-            this.coefficients[i] = coefficients[i];
+        for (i = 0; i < coef_vector.length; i++) {
+            this.coefficients[i] = coef_vector[i];
         }
     }
 
