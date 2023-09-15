@@ -33,17 +33,17 @@ public class Polynomial {
 
         return new Polynomial(result_poly);
     }
-    private double power(double base, double num){
-        if (num == 0) return 1; 
+    private double power(double base, double num, double partial){
+        if (num == 0) return partial; 
         else{
-            return base * power(base, num - 1); 
+            return power(base, num - 1, partial * base); 
         }
     }
 
     public double evaluate(double x) {
         double result = 0;
         for (int i = 0; i < coefficients.length; i++) {
-            result += coefficients[i] * power(x, i); 
+            result += coefficients[i] * power(x, i, 1.0); 
         }
         return result;
     }
