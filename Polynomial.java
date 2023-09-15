@@ -48,7 +48,18 @@ public class Polynomial {
         return result;
     }
 
+    private double abs_value(double input){
+        if (input < 0){
+            return -1*input; 
+        }
+        else{ 
+            return input; 
+        }
+    }
+
     public boolean hasRoot(double x) {
-        return evaluate(x) == 0;
+        double absolute = abs_value(evaluate(x)); 
+        double epsilon = 1e-9; 
+        return absolute < epsilon; 
     }
 }
