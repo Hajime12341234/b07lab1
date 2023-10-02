@@ -1,16 +1,30 @@
 public class Driver {
 public static void main(String [] args) {
-Polynomial p = new Polynomial();
-System.out.println(p.evaluate(3));
-double [] c1 = {6,0,0,5};
-Polynomial p1 = new Polynomial(c1);
-double [] c2 = {0,-2,0,0,-9};
-Polynomial p2 = new Polynomial(c2);
-Polynomial s = p1.add(p2);
-System.out.println("s(0.1) = " + s.evaluate(0.1));
-if(s.hasRoot(1))
-System.out.println("1 is a root of s");
-else
-System.out.println("1 is not a root of s");
+    // testing for multiply function
+    // first test
+    double[] test1_coef1 = {1, 2};
+    int[] test1_exp1 = {0, 1};
+    double[] test1_coef2 = {3, 4};
+    int[] test1_exp2 = {0, 1};
+    Polynomial test1_poly1 = new Polynomial(test1_coef1, test1_exp1);
+    Polynomial test1_poly2 = new Polynomial(test1_coef2, test1_exp2);
+    Polynomial product = test1_poly1.multiply(test1_poly2);
+    System.out.println("Product 1: " + product.toString());
+
+    // second test
+    double[] test2_coef1 = {1, 2};
+    int[] test2_exp1 = {0, 1};
+    double[] test2_coef2 = {3, -4, 5};
+    int[] test2_exp2 = {0, 2, 3};
+    Polynomial test2_poly1 = new Polynomial(test2_coef1, test2_exp1);
+    Polynomial test2_poly2 = new Polynomial(test2_coef2, test2_exp2);
+    Polynomial product2 = test2_poly1.multiply(test2_poly2);
+    System.out.println("Product 2: " + product2.toString());
+
 }
+
+
+
+
+
 }
