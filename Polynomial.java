@@ -27,7 +27,7 @@ public class Polynomial {
         for (int i=0; i < this.non_zero_coefficients.length; i++) {
             for (int j=0; j < input.non_zero_coefficients.length; j++) {
                 double temp_coef = this.non_zero_coefficients[i] * input.non_zero_coefficients[j];
-                int temp_exp = exponents[i] + input.exponents[j];
+                int temp_exp = this.exponents[i] + input.exponents[j];
 
                 int contained = 0;
                 for (int k=0; k < count_index; k++){
@@ -45,9 +45,6 @@ public class Polynomial {
                 }
             }
         }
-
-        updated_coefficients = Arrays.copyOf(updated_coefficients, count_index);
-        updated_exponents = Arrays.copyOf(updated_exponents, count_index);
 
         return new Polynomial(updated_coefficients, updated_exponents);
     }
