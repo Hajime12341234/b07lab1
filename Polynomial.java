@@ -64,7 +64,7 @@ public class Polynomial {
         int[] exponents = new int[terms.length];
 
         for (int i = 0; i < terms.length; i++) {
-            String term = terms[i].trim();
+            String term = terms[i];
             String[] parts = term.split("x");
 
             if (parts.length == 1) {
@@ -98,11 +98,11 @@ public class Polynomial {
 
         for (int i = 0; i < non_zero_coefficients.length; i++) {
             if (non_zero_coefficients[i] != 0) {
-                String sign;
+                String operator;
                 if (non_zero_coefficients[i] > 0) {
-                    sign = "+";
+                    operator = "+";
                 } else {
-                    sign = "-";
+                    operator = "-";
                 }
                 double coefficient = Math.abs(non_zero_coefficients[i]);
                 int exponent = exponents[i];
@@ -117,7 +117,7 @@ public class Polynomial {
                 }
 
                 if (!first_term) {
-                    printWriter.print(sign);
+                    printWriter.print(operator);
                 }
                 printWriter.print(term);
 
