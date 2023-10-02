@@ -117,7 +117,7 @@ public class Polynomial {
                 }
 
                 if (!first_term) {
-                    printWriter.print(operator);
+                    print_writer.print(operator);
                 }
                 print_writer.print(term);
 
@@ -126,6 +126,7 @@ public class Polynomial {
             }
         }
 
-        printWriter.close();
+        print_writer.close();
+        file_writer.close();
     }
 }
