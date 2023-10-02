@@ -119,7 +119,7 @@ public class Polynomial {
                 if (!first_term) {
                     printWriter.print(operator);
                 }
-                printWriter.print(term);
+                print_writer.print(term);
 
 
                 first_term = false;
